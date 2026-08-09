@@ -2,48 +2,262 @@
   box-sizing: border-box;
 }
 
+:root {
+  --accent: #4f8cff;
+  --accent-light: #eaf1ff;
+  --text-main: #222;
+  --text-sub: #666;
+  --bg: #f6f7fb;
+  --card-bg: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.6;
+}
+
+/* 상단 내비게이션 */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.nav nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav nav a {
+  text-decoration: none;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.nav nav a:hover {
+  color: var(--accent);
+}
+
+/* 프로필 히어로 */
+.hero {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: var(--accent-light);
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f4f4f4;
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-}
-
-.profile-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .name {
   font-size: 28px;
-  margin: 0 0 20px;
-  color: #222;
+  margin: 0 0 8px;
 }
 
-.photo {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.tagline {
+  font-size: 16px;
+  color: var(--accent);
+  margin: 0 0 8px;
+  font-weight: bold;
 }
 
 .info {
   font-size: 14px;
-  color: #888;
-  margin: 0 0 16px;
+  color: var(--text-sub);
+  margin: 0 0 20px;
 }
 
 .intro {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
+  font-size: 15px;
+  color: #444;
+  text-align: left;
+}
+
+/* 공통 섹션 */
+.section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+
+/* 관심사 태그 */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  background-color: var(--accent-light);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* 활동 타임라인 */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.timeline li:last-child {
+  border-bottom: none;
+}
+
+.timeline-date {
+  flex: 0 0 90px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.section-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: -8px 0 16px;
+}
+
+/* 프로젝트 카드 */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.project-card h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+/* 연락처 */
+.contact-item {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin: 4px 0;
+}
+
+/* 푸터 */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* 반응형 (태블릿) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 20px 32px;
+  }
+
+  .section {
+    padding: 28px 20px;
+  }
+
+  .project-grid {
+    gap: 12px;
+  }
+
+  .nav nav {
+    gap: 14px;
+  }
+
+  .timeline li {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-date {
+    flex: none;
+  }
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav nav {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 40px 16px 24px;
+  }
+
+  .section {
+    padding: 24px 16px;
+  }
 }

@@ -3,25 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>자기소개</title>
+  <title>포트폴리오 (초안)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="profile-card">
-    <h1 class="name">김지후</h1>
+  <header class="nav">
+    <span class="nav-logo">MY PORTFOLIO</span>
+    <nav>
+      <a href="#home">홈</a>
+      <a href="#about">소개</a>
+      <a href="#interests">관심사</a>
+      <a href="#activities">활동</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </header>
 
-    <img
-      class="photo"
-      src="https://via.placeholder.com/200"
-      alt="프로필 사진"
-    />
+  <main>
+    <!-- 히어로 -->
+    <section id="home" class="hero">
+      <div class="avatar" aria-hidden="true">지후</div>
+      <h1 class="name">김지후</h1>
+      <p class="tagline">프로그래밍과 게임이 취미인 16살, 중학교 졸업을 앞둔 학생입니다</p>
+    </section>
 
-    <p class="info">대한민국 · 만 16세 · 남성</p>
+    <!-- 소개 -->
+    <section id="about" class="section">
+      <h2>소개</h2>
+      <p class="intro">
+        안녕하세요! 저는 프로그래밍과 게임을 좋아하는 중학생입니다.
+        코딩으로 무언가를 직접 만들어보는 것과, 게임을 하며 아이디어를 얻는
+        것을 즐깁니다. 앞으로 로봇공학과 소프트웨어 개발 분야로 진로를
+        준비하고 있습니다.
+      </p>
+      <p class="info"><!-- 소속은 특정 학교명 없이 일반화된 표현 사용 --> 중학교 졸업을 앞둔 학생</p>
+      <p class="info">희망 진로: 로봇공학 및 소프트웨어 개발</p>
+    </section>
 
-    <p class="intro">
-      안녕하세요! 저는 새로운 것을 배우는 것을 좋아하는 개발자입니다.
-      꾸준히 성장하며 좋은 결과물을 만들기 위해 노력하고 있습니다.
-    </p>
+    <!-- 관심사 & 특기 -->
+    <section id="interests" class="section">
+      <h2>관심사 &amp; 특기</h2>
+      <ul class="tag-list">
+        <li class="tag">게임</li>
+        <li class="tag">독서</li>
+        <li class="tag">코딩</li>
+      </ul>
+    </section>
+
+    <!-- 활동 & 수상 -->
+    <section id="activities" class="section">
+      <h2>활동 &amp; 수상</h2>
+      <ul class="timeline">
+        <li>
+          <span class="timeline-date">2026.05</span>
+          <span class="timeline-desc">교내 코딩 경진대회 참가</span>
+        </li>
+        <li>
+          <span class="timeline-date">2026.03</span>
+          <span class="timeline-desc">학급 반장 활동</span>
+        </li>
+        <li>
+          <span class="timeline-date">2025.11</span>
+          <span class="timeline-desc">미술 대회 우수상 수상</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section id="projects" class="section">
+      <h2>프로젝트</h2>
+      <p class="section-desc">아직 진행한 프로젝트가 없다면, 관심사와 희망 진로에 맞춰 이런 것부터 시작해보는 걸 추천해요.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>미니 텍스트 게임 만들기</h3>
+          <p>파이썬이나 스크래치로 짧은 텍스트 어드벤처 게임을 만들며 코딩과 게임 두 관심사를 함께 살려볼 수 있어요.</p>
+        </article>
+        <article class="project-card">
+          <h3>라인트레이서 로봇 만들기</h3>
+          <p>아두이노나 마이크로비트로 센서를 따라 움직이는 간단한 로봇을 만들어보면 로봇공학 진로 탐색에 도움이 돼요.</p>
+        </article>
+        <article class="project-card">
+          <h3>독서 기록 웹페이지 만들기</h3>
+          <p>읽은 책과 감상을 정리해서 보여주는 간단한 웹페이지를 만들어 독서와 코딩을 함께 즐겨보세요.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section id="contact" class="section">
+      <h2>연락처</h2>
+      <p class="contact-item"><!-- 실제 연락처 대신 안내 문구로 대체 --> 문의는 담당 선생님을 통해 연락해 주세요.</p>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 My Portfolio. 초안 버전입니다.</p>
+  </footer>
 </body>
 </html>
